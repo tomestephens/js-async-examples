@@ -3,12 +3,11 @@ const fs = Promise.promisifyAll(require('fs')),
       async = require('asyncawait/async'),
       await = require('asyncawait/await');
 
-console.log('Start...');
-
-console.time('process');
-console.time('read file');
-
 const run = async (() => {
+    console.log('Start...');
+
+    console.time('process');
+    console.time('read file');
     var buffer = await (fs.readFileAsync('test-data.csv'));
     var text = await (bufferToText(buffer));
     var csv = await (textToCsv(text));
@@ -21,13 +20,11 @@ const run = async (() => {
     buffer = await (csvToBuffer(csv));
 
     console.time('write file');
-    await (fs.writeFileAsync('test-data-asyncawaitlib.csv', buffer));
+    await (fs.writeFileAsync('results/test-data-asyncawaitlib.csv', buffer));
     console.log("Save complete.");
     console.timeEnd('write file');
     console.timeEnd('process');
 });
-
-run();
 
 const bufferToText = async (buf => {
     console.time('buffer to text');
@@ -63,3 +60,5 @@ const csvToBuffer = async ((csvData) => {
     console.timeEnd('csv to buffer');
     return text;
 });
+
+run();
