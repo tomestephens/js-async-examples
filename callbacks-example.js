@@ -1,6 +1,6 @@
 const fs = require('fs');
 
-const run = () => {
+function run() {
   console.log('Start...');
   console.time('process');
   console.time('read file');

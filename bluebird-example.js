@@ -1,7 +1,7 @@
 const Promise = require('bluebird');
 const fs = Promise.promisifyAll(require('fs'));
 
-const run = () => {
+function run() {
   console.log('Start...');
   console.time('process');
   console.time('read file');
