@@ -3,13 +3,14 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "async": "^2.0.0-rc.5",
     "asyncawait": "^1.0.3",
+    "babel-plugin-transform-async-to-generator": "^6.8.0",
     "bluebird": "^3.4.0"
   }
 }
