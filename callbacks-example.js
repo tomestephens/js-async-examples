@@ -47,7 +47,7 @@ function bufferToText(buf, callback) {
 function textToCsv(text, callback) {
   console.time('text to csv');
   const lines = text.split('\n'),
-    csv = [];
+        csv = [];
 
   for (let line of lines) {
     csv.push(line.split(','));
