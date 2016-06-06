@@ -20,7 +20,7 @@ const run = async (() => {
     buffer = await (csvToBuffer(csv));
 
     console.time('write file');
-    await (fs.writeFileAsync('results/test-data-asyncawaitlib.csv', buffer));
+    await (fs.writeFileAsync('test-data-asyncawaitlib.csv', buffer));
     console.log("Save complete.");
     console.timeEnd('write file');
     console.timeEnd('process');

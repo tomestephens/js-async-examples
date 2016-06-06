@@ -17,7 +17,7 @@ function run() {
     return csvToBuffer(csv);
   }).then(buffer => {
     console.time('write file');
-    return fs.writeFileAsync('results/test-data-bluebird.csv', buffer);
+    return fs.writeFileAsync('test-data-bluebird.csv', buffer);
   }).then(() => {
     console.log('Save complete.');
     console.timeEnd('write file');

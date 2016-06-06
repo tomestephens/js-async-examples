@@ -19,7 +19,7 @@ function run() {
         csvToBuffer(csv, (err, buf) => {
           if (err) throw err;
           console.time('write file');
-          fs.writeFile('results/test-data-callbacks.csv', buf, (err) => {
+          fs.writeFile('test-data-callbacks.csv', buf, (err) => {
             if (err) throw err;
             console.log("Save complete.");
             console.timeEnd('write file');
